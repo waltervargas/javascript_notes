@@ -1,0 +1,15 @@
+** Crockford Tips
+
+*** =for= statement
+
+Always test if property name is truly a memember of the object or was found
+instead on the prototype chain.
+
+#+BEGIN_SRC javascript
+  for (var ele in obj) {
+      if (obj.hasOwnProperty(ele)){
+          ...
+      }
+  }
+#+END_SRC
+
